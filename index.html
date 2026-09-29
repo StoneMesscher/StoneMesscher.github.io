@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MesscherMarket Studio</title>
+<meta name="description" content="MesscherMarket Studio builds AI-assisted tools for market research, original product design, and small-business websites.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FBF8F3;
+    --surface: #FFFFFF;
+    --ink: #1F2328;
+    --muted: #5B6470;
+    --line: #E7E1D7;
+    --accent: #C4572E;
+    --accent-soft: #F6E3DA;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181B;
+      --surface: #1E2125;
+      --ink: #ECE8E1;
+      --muted: #A3A9B1;
+      --line: #30343A;
+      --accent: #E07A52;
+      --accent-soft: #3A2820;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 Inter, system-ui, sans-serif;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 28px 0; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .logo { font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em; }
+  .logo span { color: var(--accent); }
+  nav a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: 15px; }
+  nav a:hover { color: var(--ink); }
+
+  .hero { padding: 72px 0 64px; }
+  .eyebrow { color: var(--accent); font-weight: 600; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+  h1 {
+    font-family: Fraunces, Georgia, serif; font-weight: 500;
+    font-size: clamp(36px, 6vw, 60px); line-height: 1.08; letter-spacing: -0.02em;
+    margin: 12px 0 20px; max-width: 16ch;
+  }
+  .lead { font-size: 19px; color: var(--muted); max-width: 58ch; margin: 0; }
+
+  h2 { font-family: Fraunces, Georgia, serif; font-weight: 500; font-size: 30px; letter-spacing: -0.01em; margin: 0 0 8px; }
+  section { padding: 56px 0; border-top: 1px solid var(--line); }
+  .sub { color: var(--muted); margin: 0 0 32px; max-width: 60ch; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+  .card h3 { margin: 12px 0 6px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .badge {
+    display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 999px;
+    background: var(--accent-soft); color: var(--accent);
+  }
+  .badge.soon { background: transparent; color: var(--muted); border: 1px solid var(--line); }
+
+  ol.steps { list-style: none; padding: 0; margin: 0; counter-reset: s; display: grid; gap: 14px; }
+  ol.steps li {
+    counter-increment: s; display: grid; grid-template-columns: 40px 1fr; gap: 12px; align-items: start;
+  }
+  ol.steps li::before {
+    content: counter(s); width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
+    background: var(--accent-soft); color: var(--accent); font-weight: 600; font-size: 14px;
+  }
+  ol.steps strong { display: block; }
+  ol.steps span { color: var(--muted); font-size: 15px; }
+
+  ul.policy { margin: 0; padding-left: 20px; color: var(--muted); }
+  ul.policy li { margin-bottom: 8px; }
+  ul.policy strong { color: var(--ink); font-weight: 600; }
+
+  footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--accent); }
+  .note { font-size: 13px; margin-top: 8px; }
+
+  @media (max-width: 560px) {
+    header { flex-direction: column; align-items: flex-start; gap: 8px; }
+    nav a { margin: 0 16px 0 0; font-size: 14px; }
+    .hero { padding: 48px 0 44px; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">Messcher<span>Market</span> Studio</div>
+      <nav>
+        <a href="#tools">Tools</a>
+        <a href="#data">Data use</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="eyebrow">Independent studio</div>
+      <h1>Research first. Original work second.</h1>
+      <p class="lead">MesscherMarket Studio builds AI-assisted tools that study what's working in a market, then turn those lessons into original products, content and websites.</p>
+    </div>
+
+    <section id="tools">
+      <h2>What we're building</h2>
+      <p class="sub">A small team of AI workers, each with one job, coordinated by a manager that reviews everything before it ships.</p>
+      <div class="grid">
+        <div class="card">
+          <span class="badge">In development</span>
+          <h3>Market Research Tool</h3>
+          <p>Reads public marketplace listing data (titles, tags, prices, photos, favorites) to find trends: popular niches, styles, color palettes, price ranges and seasonal demand.</p>
+        </div>
+        <div class="card">
+          <span class="badge soon">Planned</span>
+          <h3>Design Studio</h3>
+          <p>Turns research findings into original product concepts, with built-in checks to avoid trademarks and copied work.</p>
+        </div>
+        <div class="card">
+          <span class="badge soon">Planned</span>
+          <h3>Video &amp; Website Workers</h3>
+          <p>Researches and scripts video content, and builds clean, modern websites for local businesses.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>How the research tool works</h2>
+      <p class="sub">It studies patterns rather than copying listings.</p>
+      <ol class="steps">
+        <li><div><strong>Search</strong><span>Pulls public, active listings for a keyword through the official marketplace API.</span></div></li>
+        <li><div><strong>Analyze</strong><span>Describes each listing's style in general terms: typography, palette, wording structure, photo layout.</span></div></li>
+        <li><div><strong>Summarize</strong><span>Ranks listings by public demand signals and rolls the findings into a single market report.</span></div></li>
+        <li><div><strong>Brief</strong><span>Produces direction for original designs, plus a list of trademarks and phrases to avoid.</span></div></li>
+      </ol>
+    </section>
+
+    <section id="data">
+      <h2>Data use</h2>
+      <p class="sub">How the research tool handles marketplace data.</p>
+      <ul class="policy">
+        <li><strong>Read-only.</strong> It does not post, edit, message or buy anything.</li>
+        <li><strong>Public data only.</strong> It uses public listing information. It does not access buyer accounts, orders or personal data.</li>
+        <li><strong>Official API only.</strong> No scraping, and requests stay within published rate limits.</li>
+        <li><strong>Internal use.</strong> Results are used for the studio's own research and are not sold or shared.</li>
+        <li><strong>Short retention.</strong> Raw listing data is kept only as long as needed for a report and is refreshed from the API rather than stored long-term.</li>
+      </ul>
+    </section>
+
+    <footer id="contact">
+      <div>© <span id="yr">2026</span> MesscherMarket Studio · <a href="https://github.com/StoneMesscher">github.com/StoneMesscher</a></div>
+      <div class="note">Independent studio. Not affiliated with, endorsed by, or sponsored by any marketplace.</div>
+    </footer>
+  </div>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
